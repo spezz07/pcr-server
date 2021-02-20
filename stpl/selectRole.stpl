@@ -1,0 +1,15 @@
+select * from pcr_role
+{% if RoleName!= "" || RoleAlias!= "" %}
+where
+{% endif %}
+{% if RoleName!= "" %}
+role_name LIKE "%{{RoleName}}%"
+{% endif %}
+{% if RoleName!= "" && RoleAlias!= "" %}
+AND
+{% endif %}
+{% if RoleAlias!= "" %}
+role_alias LIKE "%{{RoleAlias}}%"
+{% endif %}
+limit {{Limit}}
+offset {{Offset}}

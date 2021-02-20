@@ -1,0 +1,58 @@
+# Gin-Vue-Admin Global Configuration
+
+# casbin configuration
+casbin:
+  model-path: './resource/rbac_model.conf'
+
+gin:
+  mode: "release"
+
+wxapp:
+    secret: ''
+    appid: ''
+
+# mysql connect configurationm
+dataBase:
+  type: ''
+  username: ''
+  password: 'p@'
+  path: ''
+  dbname: ''
+  config: ''
+  max-idle-conns: 10
+  max-open-conns: 10
+  log-mode: true
+
+# oss configuration
+
+# 请自行七牛申请对应的 公钥 私钥 bucket 和 域名地址
+
+
+# redis configuration
+redis:
+  addr: ''
+  password: ''
+  db: 0
+
+# system configuration
+system:
+  use-multipoint: false
+  env: 'public'  # Change to "develop" to skip authentication for development mode
+  addr: 8888
+  db-type: "mysql"  # support mysql/sqlite
+
+# captcha configuration
+captcha:
+  key-long: 6
+  img-width: 240
+  img-height: 80
+
+# logger configuration
+log:
+  prefix: '[pcr-web]'
+  log-file: true
+  stdout: 'DEBUG'
+  file: 'DEBUG'
+
+
+

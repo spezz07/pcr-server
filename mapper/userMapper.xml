@@ -1,0 +1,6 @@
+<sqlMap>
+    <sql id="selUserAccount">
+        select * from pcr_user where account = ?
+    </sql>
+
+</sqlMap>
